@@ -1,24 +1,23 @@
-import {ADD, DELETE, EDIT} from "./actionsType";
+import {ADD_WORD, DELETE_WORD, EDIT_WORD} from "./actionsType";
 
-export const addWord = (word, translate) =>{
+export const toAddWord = (addedWord) =>{
     return{
-        type: ADD, 
-        word:{
-            word: word,
-            translate: translate
-        }
+        type: ADD_WORD, 
+        addedWord
     }
 }
 
-export const deleteWord = (deleteWord) =>{
+export const toDeleteWord = (deletedWord) =>{
     return{
-        type: DELETE,
-        deleteWord
+        type: DELETE_WORD,
+        deletedWord
     }
 }
 
-export const editeWord = () =>{
+export const toEditWord = (preEditWord, postEditWord) =>{
     return{
-        type: EDIT
+        type: EDIT_WORD,
+        preEditWord,
+        postEditWord
     }
 }
